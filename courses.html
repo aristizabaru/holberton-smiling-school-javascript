@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="keywords" content="school,smile,smileSchool,smileschool.com,learn how to smile,www.smileschool.com" />
+    <meta name="description" content="Learn how to smile naturally with our method" />
+    <title>Simle School</title>
+
+    <!-- Meta tags for social interaction (dummy url's) -->
+    <meta property="og:title" content="Smile School | Why so serious?" />
+    <meta property="og:description" content="Learn how to smile naturally with our method" />
+    <meta property="og:image" content="https://smileschool.com/media/smileschool_og.png" />
+    <meta property="og:url" content="https://www.smilechool.com" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@smileschool" />
+    <meta property="twitter:title" content="Smile School | Why so serious?" />
+    <meta property="twitter:description" content="Learn how to smile naturally with our method" />
+    <meta property="twitter:image" content="https://smileschool.com/media/smileschool_og.png" />
+    <!-- icon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet" />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header header-courses" data-section-theme="dark">
+      <!-- navegation -->
+      <section
+        class="navegation container d-flex flex-column flex-sm-row justify-content-center align-items-center pt-4"
+      >
+        <input type="checkbox" class="menu-btn" id="menu-btn" />
+        <label for="menu-btn" class="menu-icon">
+          <span class="navicon"></span>
+        </label>
+        <div class="logo">
+          <a href="/" class="d-flex flex-column flex-sm-row align-items-center">
+            <picture>
+              <source srcset="images/smile_off@1x.png 1x, images/smile_off@2x.png 2x" />
+              <img src="images/smile_off@1x.png" width="45" height="35" class="mr-3 mb-2 mb-sm-0" />
+            </picture>
+            <picture>
+              <source srcset="images/logo@1x.png 1x, images/logo@2x.png 2x" />
+              <img src="images/logo@1x.png" alt="smileschool logo" width="115" height="30" />
+            </picture>
+          </a>
+        </div>
+        <!-- menu -->
+        <nav class="navbar-menu mx-auto ml-sm-auto mr-sm-0 text-uppercase font-weight-bold small">
+          <ul class="nav flex-column flex-sm-row text-center text-sm-left mt-2 mt-sm-0" id="nav">
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link">courses</a>
+            </li>
+            <li class="nav-item">
+              <a href="pricing.html" class="nav-link">pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">login</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- call to action -->
+
+      <p class="h3 text-center py-5 coiny mb-0">
+        « Don’t cry because it’s over.<br /><span class="text-primary">Smile</span>
+        because it happened. »
+      </p>
+    </header>
+    <!-- Search filters -->
+    <main>
+      <!-- filters -->
+      <section id="searchbar-section" class="text-white bg-purple">
+        <div class="pt-5 pb-3 container">
+          <div class="row justify-content-center align-items-start">
+            <!-- search -->
+            <div class="col-sm-12 col-md-4">
+              <small class="font-weight-bold">KEYWORDS</small>
+              <div class="searchbar border-bottom mt-0 mb-4">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button id="search-button" type="submit" class="btn btn-link text-white">
+                      <span class="holberton_school-icon-search_1"></span>
+                    </button>
+                  </div>
+                  <input
+                    type="search"
+                    class="form-control border-0 searchbar text-light"
+                    placeholder="Search by keywords"
+                    aria-describedby="search-button"
+                    id="search"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- topic -->
+            <div class="col-sm-6 col-md-4">
+              <small class="font-weight-bold">TOPIC</small>
+              <div class="searchbar border-bottom mt-0 mb-4">
+                <select class="custom-select searchbar text-white border-0" id="sel1"></select>
+              </div>
+            </div>
+            <!-- sort -->
+            <div class="col-sm-6 col-md-4">
+              <small class="font-weight-bold">SORT BY</small>
+              <div class="searchbar border-bottom mt-0 mb-4">
+                <select class="custom-select searchbar text-white border-0" id="sel2"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- results -->
+      <section class="container py-5" id="coursesContainer"></section>
+    </main>
+    <!-- footer -->
+    <footer class="py-5 bg-black" data-section-theme="dark">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-between"
+      >
+        <div class="logo mt-3">
+          <a href="/" class="d-flex align-items-center">
+            <picture>
+              <source srcset="images/smile_off@1x.png 1x, images/smile_off@2x.png 2x" />
+              <img src="images/smile_off@1x.png" width="45" height="35" class="mr-3 mb-2 mb-sm-0" />
+            </picture>
+            <picture>
+              <source srcset="images/logo@1x.png 1x, images/logo@2x.png 2x" />
+              <img src="images/logo@1x.png" alt="smileschool logo" width="115" height="30" />
+            </picture>
+          </a>
+        </div>
+        <ul class="list-unstyled d-flex mt-3">
+          <li>
+            <a href="#" aria-label="Facebook" class="text-decoration-none"
+              ><span class="holberton_school-icon-ic_facebook" style="font-size: 2rem"></span
+            ></a>
+          </li>
+          <li class="mx-3">
+            <a href="#" aria-label="Twitter" class="text-decoration-none"
+              ><span class="holberton_school-icon-ic_twitter" style="font-size: 2rem"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram" class="text-decoration-none"
+              ><span class="holberton_school-icon-ic_instagram" style="font-size: 2rem"></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <p class="text-center text-muted mt-5">
+        &#169;headphones
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+    <!-- bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/ajax_courses.js"></script>
+  </body>
+</html>
